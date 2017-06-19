@@ -16,6 +16,9 @@ public class Sell {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id_sell;
 
+    @OneToOne(fetch = FetchType.EAGER)
+    private int Id_seller;
+
     @Column(name = "price")
     private double price;
 

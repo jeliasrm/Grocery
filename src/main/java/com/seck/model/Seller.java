@@ -13,6 +13,7 @@ public class Seller {
     @Id
     @Column(name = "id_seller")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @OneToMany(mappedBy = "entity", cascade = CascadeType.ALL)
     private int Id_seller;
 
     @Column(name = "name_seller")

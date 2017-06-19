@@ -1,9 +1,6 @@
 package com.seck.model;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -14,10 +11,13 @@ public class Shop {
     @Id
     @Column(name = "id_shop")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @OneToMany(mappedBy = "entity", cascade = CascadeType.ALL)
     private int Id_shop;
 
+    @OneToOne(fetch = FetchType.EAGER)
     private int Id_seller;
 
+    @OneToOne(fetch = FetchType.EAGER)
     private int Id_supplier;
 
     @Column(name = "total_price")

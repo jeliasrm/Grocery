@@ -13,6 +13,7 @@ public class Product {
     @Id
     @Column(name = "id_product")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @OneToMany(mappedBy = "entity", cascade = CascadeType.ALL)
     private int Id_product;
 
     @Column(name = "name")
