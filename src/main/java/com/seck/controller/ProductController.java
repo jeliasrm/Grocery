@@ -57,6 +57,7 @@ public class ProductController {
 
             productService.addProduct(product);
 
+
         return "views/addproduct";
     }
 
