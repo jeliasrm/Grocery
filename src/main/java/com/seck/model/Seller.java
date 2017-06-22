@@ -1,6 +1,7 @@
 package com.seck.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by elias on 19/06/17.
@@ -13,11 +14,13 @@ public class Seller {
     @Id
     @Column(name = "id_seller")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @OneToMany(mappedBy = "entity", cascade = CascadeType.ALL)
-    private int Id_seller;
+    private int id_seller;
 
     @Column(name = "name_seller")
     private String name;
+
+    @OneToMany(mappedBy = "id_seller", cascade = CascadeType.ALL)
+    private Set<Sell> sells;
 
     public Seller() {
     }
@@ -27,11 +30,11 @@ public class Seller {
     }
 
     public int getId_seller() {
-        return Id_seller;
+        return id_seller;
     }
 
     public void setId_seller(int id_seller) {
-        Id_seller = id_seller;
+        this.id_seller = id_seller;
     }
 
     public String getName_seller() {

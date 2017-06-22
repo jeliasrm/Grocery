@@ -12,13 +12,13 @@ public class Shop {
     @Column(name = "id_shop")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @OneToMany(mappedBy = "entity", cascade = CascadeType.ALL)
-    private int Id_shop;
+    private int id_shop;
 
     @OneToOne(fetch = FetchType.EAGER)
-    private int Id_seller;
+    private int id_seller;
 
     @OneToOne(fetch = FetchType.EAGER)
-    private int Id_supplier;
+    private int id_supplier;
 
     @Column(name = "total_price")
     private int total_price;

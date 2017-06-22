@@ -14,10 +14,11 @@ public class Sell {
     @Id
     @Column(name = "id_sell")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id_sell;
+    private int id_sell;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    private int Id_seller;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_seller", nullable = false)
+    private Seller id_seller;
 
     @Column(name = "price")
     private double price;
@@ -34,11 +35,11 @@ public class Sell {
     }
 
     public int getId_sell() {
-        return Id_sell;
+        return id_sell;
     }
 
     public void setId_sell(int id_sell) {
-        Id_sell = id_sell;
+        this.id_sell = id_sell;
     }
 
     public double getPrice() {
